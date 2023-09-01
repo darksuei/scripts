@@ -7,6 +7,11 @@ fi
 
 COMMIT_MESSAGE="$1"
 REMOTE_URL="$2"
+SCRIPT_NAME="git-init.sh" 
+
+if ! grep -q "$SCRIPT_NAME" .gitignore; then
+    echo "$SCRIPT_NAME" >> .gitignore
+fi
 
 git init
 
@@ -20,5 +25,5 @@ git remote add origin $REMOTE_URL
 
 git push -u origin main
 
-echo "Repository successfully initialized and code pushed to remote."
+echo "->> Repository successfully initialized and code pushed to remote!"
 

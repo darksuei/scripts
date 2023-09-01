@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPT_NAME = "git-acp.sh"
+SCRIPT_NAME="git-acp.sh" 
 
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <commit_message>"
